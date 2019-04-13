@@ -1,0 +1,48 @@
+/* My Stylesheet */
+
+body {
+    background-color: lightgray;
+}
+
+h1, h2, h3, h4 {
+    color: rgb(111, 146, 158);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    align-content: center;
+  }
+
+#image_pad {
+    margin: 20px auto;
+}
+
+/* Background Box */
+.box {
+    padding: 30px;
+    background: whitesmoke;
+    margin: 60px;
+    align-content: center;
+    block-size: auto;
+}
+
+#center {
+    text-align: center;
+    align-content: center;
+}
+
+#center_pic {
+    display: block;
+    margin: 0 auto;
+  }
+
+#datatable th {
+    background-color: rgb(153, 192, 206);
+}
+
+/* .displayedpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */

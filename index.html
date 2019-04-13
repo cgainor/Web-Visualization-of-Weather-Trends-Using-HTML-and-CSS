@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Title -->
+    <title>Web Visualization - Weather Dashboard</title>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Create Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eaf9fa;">
+
+        <!-- Header (Home Link) is Latitude Button -->
+        <a class="navbar-brand" href="index.html">Latitude</a>
+
+        <!-- Make it so navbar collapses to icon dropdown when window size decreased -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Stuff in collapsible navbar -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!-- menu items -->
+            <div class="navbar-nav ml-auto nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href='lat_vs_maxtemp.html'>Max Temperature</a>
+                    <a class="dropdown-item" href='lat_vs_humidity.html'>Humidity</a>
+                    <a class="dropdown-item" href='lat_vs_cloudiness.html'>Cloudiness</a>
+                    <a class="dropdown-item" href='lat_vs_windspeed.html'>Wind Speed</a>
+                </div>
+                <a class="nav-item nav-link" href="comparisons.html">Comparison</a>
+                <a class="nav-item nav-link" href="data.html">Data</a>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Create Grid -->
+    <div class="container-fluid">
+        <!-- Create Row -->
+        <div class="row">
+            <div class="col-md-6 box">
+                <h2>Summary: Latitude vs. X</h2>
+                <hr>
+
+                <p><img src="Visualizations/City Latitude vs. Max Temperature Clear.png"
+                        alt="City Latitude vs. Max Temperature" style="float:left;" class="img-fluid">
+                    The purpose of this project was to analyze how weather changes as you get closer to the equator. To
+                    accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on
+                    over 500 cities.</br></br>After assembling the dataset, we used Matplotlib to plot various aspects
+                    of the weather
+                    vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This
+                    site provides the source data and visualizations created as part of the analysis, as well as
+                    explanations
+                    and descriptions of any trends and correlations witnessed.
+                </p>
+            </div>
+            <div class="col-md-4 box">
+                <h3 id="center">Visualizations</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="lat_vs_maxtemp.html"><img class="img-thumbnail" id="image_pad"
+                                src="Visualizations/City Latitude vs. Max Temperature Clear.png"
+                                alt="City Latitude vs. Max Temperature"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="lat_vs_humidity.html"><img class="img-thumbnail" id="image_pad"
+                                src="Visualizations/City Latitude vs. Humidity Clear.png"
+                                alt="City Latitude vs. Humidity"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="lat_vs_cloudiness.html"><img class="img-thumbnail" id="image_pad"
+                                src="Visualizations/City Latitude vs. Cloudiness Clear.png"
+                                alt="City Latitude vs. Cloudiness"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="lat_vs_windspeed.html"><img class="img-thumbnail" id="image_pad"
+                                src="Visualizations/City Latitude vs. Wind Speed Clear.png"
+                                alt="City Latitude vs. Wind Speed"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
